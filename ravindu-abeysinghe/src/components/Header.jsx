@@ -8,7 +8,7 @@ import Navbar from './Navbar'
 
 const Header = () => {
 
- const [navOpen, setNavOpen] = useState( false);
+ const [navOpen, setNavOpen] = useState(false);
 
   return (
     <header className='fixed top-0 left-0 w-full h-20 flex

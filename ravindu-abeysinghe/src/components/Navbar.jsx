@@ -29,6 +29,7 @@ const Navbar = ({ navOpen }) => {
 
     }
     
+    // navItems is an array of navigation link details (like Home, About, etc.).
     const navItems = [
         {
           label: 'Home',
@@ -39,6 +40,11 @@ const Navbar = ({ navOpen }) => {
         {
           label: 'About',
           link: '#about',
+          className: 'nav-link'
+        },
+        {
+          label: 'Education',
+          link: '#education',
           className: 'nav-link'
         },
         {

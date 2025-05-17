@@ -1,0 +1,48 @@
+
+Header
+
+- In the `Header.jsx` component, the `useState` hook is used to manage the visibility of the mobile navigation menu. 
+- It initializes a boolean state variable called `navOpen` with a default value of `false`, meaning the menu is initially closed.
+- When the user clicks the menu button, the `setNavOpen` function toggles the value between `true` and `false`, which updates the UI accordingly. 
+- This state determines whether the `Navbar` component is shown and also changes the button icon from 'menu' to 'close' based on the current state.
+
+
+Navbar
+
+- useRef is used to hold references to DOM elements (like links and the active-box div).
+- Navbar function receives a prop called navOpen (a boolean) that controls whether the navbar is visible.
+- navItems is an array of navigation link details (like Home, About, etc.).
+- .map() goes through each item in the array and renders an <a> link for it.
+
+What is useRef?
+useRef() gives you a box you can store something in — usually a DOM element (like a div or a tag) — and that box won't get reset when your component re-renders.
+In this code, you're using it to track HTML elements on the screen — specifically:
+The currently active link (like “Home”)
+The moving highlight box that follows the active link
+
+🧩 How It Works in Your Code
+✅ const lastActiveLink = useRef();
+This is used to remember which link was last clicked.
+It lets you:
+Remove the 'active' class from the old link
+Add 'active' to the new one
+Move the highlight box to the new link
+
+Why use useRef instead of state?
+If you used useState for this, changing it would cause a full re-render — slower and less efficient.
+useRef is perfect when you need to touch the DOM directly, like with .style, .offsetTop
+
+What is useEffect?
+useEffect is a React hook that runs code after your component renders.
+🧨 Think of it as:
+“Do something after the page loads or updates.”
+🧠 Why is this important?
+When your page loads:
+The highlight box (<div class="active-box">) needs to know where to start.
+useEffect(initActiveBox, []) makes sure it's in the right position from the start.
+Without it, the box might:
+Not show up in the right place
+Be invisible
+Appear suddenly when you click
+
+
