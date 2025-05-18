@@ -9,38 +9,38 @@ import ProjectCard from './ProjectCard';
 
 const works = [
     {
-      imgSrc: '/images/project-1.jpg',
+      imgSrc: '/images/p1.png',
       title: 'Baby Development Tracking System',
       tags: ['API', 'MVC', 'Development'],
       projectLink: 'https://musify-5al0.onrender.com/'
     },
     {
-      imgSrc: '/images/project-2.jpg',
-      title: 'Free stock photo app',
+      imgSrc: '/images/p2.png',
+      title: 'Event Attendance management System',
       tags: ['API', 'SPA'],
       projectLink: 'https://pixstock-official.vercel.app/'
     },
     {
-      imgSrc: '/images/project-3.jpg',
-      title: 'Recipe app',
+      imgSrc: '/images/p4.png',
+      title: 'Library Management System',
       tags: ['Development', 'API'],
       projectLink: ''
     },
     {
-      imgSrc: '/images/project-4.jpg',
-      title: 'Real state website',
+      imgSrc: '/images/p3.png',
+      title: 'Movie Review Web App',
       tags: ['Web-design', 'Development'],
       projectLink: 'https://github.com/codewithsadee-org/wealthome'
     },
     {
-      imgSrc: '/images/project-5.jpg',
-      title: 'eCommerce website',
+      imgSrc: '/images/p5.png',
+      title: 'Game of Thrones MobileApp',
       tags: ['eCommerce', 'Development'],
       projectLink: 'https://github.com/codewithsadee/anon-ecommerce-website'
     },
     {
-      imgSrc: '/images/project-6.jpg',
-      title: 'vCard Personal portfolio',
+      imgSrc: '/images/p6.jpeg',
+      title: 'Keyboard for the Visually Impaired',
       tags: ['Web-design', 'Development'],
       projectLink: 'https://github.com/codewithsadee/vcard-personal-portfolio'
     },
