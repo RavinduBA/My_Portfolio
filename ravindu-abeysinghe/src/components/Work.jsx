@@ -10,7 +10,7 @@ import ProjectCard from './ProjectCard';
 const works = [
     {
       imgSrc: '/images/project-1.jpg',
-      title: 'Full stack music app',
+      title: 'Baby Development Tracking System',
       tags: ['API', 'MVC', 'Development'],
       projectLink: 'https://musify-5al0.onrender.com/'
     },

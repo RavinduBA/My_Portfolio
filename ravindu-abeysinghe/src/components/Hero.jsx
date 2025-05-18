@@ -30,17 +30,25 @@ className='pt-28 lg:pt-36'>
                 rounded-full bg-emerald-400 animate-ping'></span>
                 </span>
                 Available for work
-
+                
         </div>                     
         </div>
-        <h2 className='headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10'> 
-        Building Scalable Modern Websites for the Future
+        <h2 className='headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-1 lg:mb-5'> 
+        Engineering the Web, One Pixel at a Time...
          </h2>
+
+         <p className='text-zinc-300 mb-5 md:mb-8 md:text-l bg-zinc-800 
+         w-fit px-4 py-2 rounded-md flex items-center'>
+           Ravindu Abeysinghe
+           </p>
+
          <div className=' flex items-center gap-3'>
-            <ButtonPrimary
-               label="Download CV"
-               icon="download" 
-               />
+         <ButtonPrimary
+          label="Download CV"
+          icon="download"
+          href="/images/cv.pdf"  // Path to your PDF file
+          downloadFile="Ravindu_Abeysinghe_CV.pdf"  // Name that will appear when downloaded
+        />
 
             <ButtonOutline
                href="#about"
