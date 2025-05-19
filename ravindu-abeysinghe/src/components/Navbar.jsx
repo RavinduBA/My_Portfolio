@@ -43,8 +43,8 @@ const Navbar = ({ navOpen }) => {
           className: 'nav-link'
         },
         {
-          label: 'Education',
-          link: '#education',
+          label: 'Tools',
+          link: '#skill',
           className: 'nav-link'
         },
         {
@@ -53,8 +53,8 @@ const Navbar = ({ navOpen }) => {
           className: 'nav-link'
         },
         {
-          label: 'Reviews',
-          link: '#reviews',
+          label: 'Blog',
+          link: '#blog',
           className: 'nav-link'
         },
         {

@@ -4,6 +4,12 @@ import React from 'react'
 import SkillCard from './SkillCard'
 
 const skillItem = [
+  {
+    imgSrc: '/images/react.svg',
+    label: 'React',
+    desc: 'Framework'
+  },
+  
     {
       imgSrc: '/images/figma.svg',
       label: 'Figma',
@@ -34,23 +40,80 @@ const skillItem = [
       label: 'MongoDB',
       desc: 'Database'
     },
-    {
-      imgSrc: '/images/react.svg',
-      label: 'React',
-      desc: 'Framework'
-    },
+    
     {
       imgSrc: '/images/tailwindcss.svg',
       label: 'TailwindCSS',
       desc: 'User Interface'
     },
+    {
+      imgSrc: '/images/aws.jpeg',
+      label: 'AWS',
+      desc: ' Cloud platform'
+    }
+    ,{
+      imgSrc: '/images/pn.png',
+      label: 'React Native',
+      desc: 'Framework'
+    },{
+      imgSrc: '/images/php.png',
+      label: 'PHP',
+      desc: 'Server language'
+    }
+    ,
+    {
+      imgSrc: '/images/python.png',
+      label: 'Python',
+      desc: 'Language'
+    },
+    {
+      imgSrc: '/images/sql.png',
+      label: 'MYSQL',
+      desc: 'Database'
+    },
+    {
+      imgSrc: '/images/git.png',
+      label: 'Git',
+      desc: 'Version Control '
+    },
+    {
+      imgSrc: '/images/as.png',
+      label: 'Android Studio',
+      desc: 'Development'
+    },
+    {
+      imgSrc: '/images/bt.jpeg',
+      label: 'Bootstrap',
+      desc: 'CSS framework'
+    },
+    {
+      imgSrc: '/images/fi.png',
+      label: 'Firebase',
+      desc: 'BaaS'
+    },
+    {
+      imgSrc: '/images/d.jpeg',
+      label: 'Docker',
+      desc: 'Containerization '
+    },
+    {
+      imgSrc: '/images/download.png',
+      label: 'Java',
+      desc: 'Language'
+    },
+    {
+      imgSrc: '/images/t.jpeg',
+      label: 'TypeScript',
+      desc: 'Interaction'
+    }
+     
   ];
 
 
 
 const Skill = () => {
   return (
-    <section className='section'>
+    <section className='section' id="skill">
         <div className='container'>
             <h2 className='headline-2'>
             Essential Tools I use
@@ -59,7 +122,7 @@ const Skill = () => {
             Discover the powerful tools and technologies I use to create exceptional, high-performing websites & 
             applications.
             </p>
-            <div className='grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]'>
+            <div className='grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
            {
             skillItem.map(({imgSrc, label, desc},key) =>
             (

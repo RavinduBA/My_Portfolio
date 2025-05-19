@@ -140,7 +140,11 @@ ring-inset transition-[background-color]
 .reviews-swiper .swiper-button-next,
 .reviews-swiper .swiper-button-prev {
   color: #098ce965;
+  font-weight: 1500;
+
 }
+
+
 
 .reviews-swiper .swiper-pagination-bullet-active {
   background: #333;
