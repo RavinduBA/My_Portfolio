@@ -19,8 +19,8 @@ const sitemap = [
       href: '#work'
     },
     {
-      label: 'Reviews',
-      href: '#reviews'
+      label: 'Blog',
+      href: '#blog'
     },
     {
       label: 'Contact me',
@@ -31,23 +31,23 @@ const sitemap = [
   const socials = [
     {
       label: 'GitHub',
-      href: 'https://www.github.com/codewithsadee-org'
+      href: 'https://github.com/RavinduBA'
     },
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/codewithsadee'
+      href: 'http://www.linkedin.com/in/ravindu1'
     },
     {
       label: 'Twitter X',
-      href: 'https://x.com/codewithsadee_'
+      href: 'https://twitter.com/r_bandara_'
     },
     {
       label: 'Instagram',
-      href: 'https://www.instagram.com/codewithsadee'
+      href: 'https://www.instagram.com/_.ravin__/'
     },
     {
-      label: 'CodePen',
-      href: 'https://codepen.io/codewithsadee'
+      label: 'Blogger',
+      href: 'https://ravinduabeysinghe.blogspot.com/'
     }
   ];
 
