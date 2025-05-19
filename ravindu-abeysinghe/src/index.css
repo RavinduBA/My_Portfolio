@@ -146,7 +146,7 @@ ring-inset transition-[background-color]
   background: #333;
 }
 
-/* Add this to your index.css file */
+/* Card slider in Revoiew.jsx */
 
 /* Fix spacing between cards */
 .reviews-swiper {

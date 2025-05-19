@@ -9,40 +9,40 @@ import ProjectCard from './ProjectCard';
 
 const works = [
     {
-      imgSrc: '/images/p1.png',
-      title: 'Baby Development Tracking System',
-      tags: ['API', 'MVC', 'Development'],
-      projectLink: 'https://musify-5al0.onrender.com/'
-    },
-    {
       imgSrc: '/images/p2.png',
       title: 'Event Attendance management System',
-      tags: ['API', 'SPA'],
-      projectLink: 'https://pixstock-official.vercel.app/'
+      tags: ['React', 'Web', 'AWS',' Mongo'],
+      projectLink: 'https://github.com/RavinduBA/e19-3yp-Event-Attendance-Management-System/'
+    },
+    {
+      imgSrc: '/images/p1.png',
+      title: 'Baby Development Tracking System',
+      tags: ['Android Studio', 'Firebase','API'],
+      projectLink: 'https://github.com/RavinduBA/e19-co225-Baby-Developement-Tracking-System-Mobileapplication/'
     },
     {
       imgSrc: '/images/p4.png',
       title: 'Library Management System',
-      tags: ['Development', 'API'],
-      projectLink: ''
+      tags: ['PHP', 'MYSQL',"SCSS"],
+      projectLink: 'https://github.com/RavinduBA/librarymanagmentsystemD/'
     },
     {
       imgSrc: '/images/p3.png',
       title: 'Movie Review Web App',
-      tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/codewithsadee-org/wealthome'
+      tags: ['Node', 'React','Tailwind CSS','Ongoing'],
+      projectLink: 'https://github.com/RavinduBA/Movie-Review-WebApp'
     },
     {
       imgSrc: '/images/p5.png',
       title: 'Game of Thrones MobileApp',
-      tags: ['eCommerce', 'Development'],
-      projectLink: 'https://github.com/codewithsadee/anon-ecommerce-website'
+      tags: ['React Native', 'Firebase','SCSS'],
+      projectLink: 'https://github.com/RavinduBA/Game-Of-Thrones-MobileApp'
     },
     {
       imgSrc: '/images/p6.jpeg',
       title: 'Keyboard for the Visually Impaired',
-      tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/codewithsadee/vcard-personal-portfolio'
+      tags: ['Python', 'Hardware'],
+      projectLink: 'https://github.com/RavinduBA/e19-co227-Keyboard-for-Visually-Impaired'
     },
   ];
 

@@ -64,7 +64,7 @@ const Review = () => {
           navigation
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 3000,
+            delay: 1000,
             disableOnInteraction: false,
           }}
           breakpoints={{
