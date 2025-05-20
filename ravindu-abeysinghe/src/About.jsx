@@ -47,7 +47,7 @@ const About = () => {
                         ))
                     }
                     <img 
-                    src="/images/ads.png"
+                    src="/images/gray.png"
                     alt="" 
                     width={27}
                     height={27}
@@ -139,7 +139,7 @@ const About = () => {
                   2013 – 2019
                 </div>
                 <p className="text-zinc-300 text-[14px]">
-                  Completed GCE A/l's on Physical science stream (AAC) . Built the foundation for my interest in technology and problem solving.
+                  Completed GCE A/l's on Physical science stream ( AAC ) . Built the foundation for my interest in technology and problem solving.
                 </p>
               </div>
             </div>
