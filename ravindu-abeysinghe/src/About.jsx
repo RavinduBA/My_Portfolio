@@ -5,7 +5,7 @@ import React, {useState} from 'react'
 const aboutItems = [
     {
       label: 'Project done',
-      number: 8
+      number: 15
     },
     {
       label: 'Technologies Learned',
