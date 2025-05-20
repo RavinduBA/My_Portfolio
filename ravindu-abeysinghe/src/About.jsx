@@ -47,10 +47,10 @@ const About = () => {
                         ))
                     }
                     <img 
-                    src="/images/logo.svg"
-                    alt="Logo" 
-                    width={30}
-                    height={30}
+                    src="/images/ads.png"
+                    alt="" 
+                    width={27}
+                    height={27}
                     className='ml-auto md:w-[40px] md:h-[40px]' />
 
       
@@ -81,24 +81,24 @@ const About = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl text-blue-400 material-symbols-rounded">work</span>
-              <h2 className="text-2xl font-bold text-white">Experience</h2>
+              <h2 className="text-xl font-bold text-white">Experience</h2>
             </div>
             
             <div className="ml-9 space-y-6">
               {/* Work Experience */}
               <div className="border-l-2 border-blue-400/30 pl-6 relative">
                 <div className="absolute w-3 h-3 bg-blue-400 rounded-full -left-[6.5px] top-2"></div>
-                <h3 className="text-xl font-semibold text-white">Software Engineering Intern</h3>
+                <h3 className="text-[17px] font-semibold text-white">Software Engineering Intern</h3>
                 <div className="flex items-center text-zinc-300 text-sm ">
-                  <span className="material-symbols-rounded text-base mr-1">business</span>
+                  <span className="material-symbols-rounded text-[14px] mr-1">business</span>
                   WealthOS
                 </div>
-                <div className="flex items-center text-zinc-400 text-sm mb-2">
-                  <span className="material-symbols-rounded text-sm mr-1">calendar_month</span>
+                <div className="flex items-center text-zinc-400 text-sm mb-1">
+                  <span className="material-symbols-rounded text-[14px] mr-1">calendar_month</span>
                   2024
                 </div>
-                <p className="text-zinc-300">
-                  Contributed to real-world software development projects, collaborated with cross-functional teams, and enhanced my skills in backend systems, APIs, and cloud technologies.
+                <p className="text-zinc-300 text-[14px]">
+                Actively contributed to real-world software development projects, collaborating with cross-functional teams to deliver scalable backend systems and robust APIs. Gained hands-on experience with cloud technologies and participated in development focused on generative AI, deepening my understanding of cutting-edge innovations in the field.
                 </p>
               </div>
             </div>
@@ -109,37 +109,37 @@ const About = () => {
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl text-blue-400 material-symbols-rounded">school</span>
-              <h2 className="text-2xl font-bold text-white">Education</h2>
+              <h2 className="text-xl font-bold text-white">Education</h2>
             </div>
             
             <div className="ml-9 space-y-6">
               {/* University Education */}
               <div className="border-l-2 border-blue-400/30 pl-6 relative">
                 <div className="absolute w-3 h-3 bg-blue-400 rounded-full -left-[6.5px] top-2"></div>
-                <h3 className="text-xl font-semibold text-white">BSc (Hons) in Computer Engineering</h3>
-                <div className="flex items-center text-zinc-300 text-sm mb-1">
-                  <span className="material-symbols-rounded text-base mr-1">location_on</span>
+                <h3 className="text-[17px] font-semibold text-white">BSc (Hons) in Computer Engineering</h3>
+                <div className="flex items-center text-zinc-300 text-sm ">
+                  <span className="material-symbols-rounded text-[14px] mr-1">location_on</span>
                   University of Peradeniya , Faculty of Engineering 
                 </div>
-                <div className="flex items-center text-zinc-400 text-sm mb-2">
-                  <span className="material-symbols-rounded text-base mr-1">calendar_month</span>
+                <div className="flex items-center text-zinc-400 text-sm mb-1">
+                  <span className="material-symbols-rounded text-[14px] mr-1">calendar_month</span>
                   2021 – Present
                 </div>
-                <p className="text-zinc-300">
-                  Currently pursuing my undergraduate degree with a strong focus on software development, computer systems, and emerging technologies.
+                <p className="text-zinc-300 text-[14px]">
+                  Currently pursuing my undergraduate degree with a strong focus on software development, cloud computing & emerging technologies.
                 </p>
               </div>
               
               {/* High School Education */}
               <div className="border-l-2 border-blue-400/30 pl-6 relative">
                 <div className="absolute w-3 h-3 bg-blue-400 rounded-full -left-[6.5px] top-2"></div>
-                <h3 className="text-xl font-semibold text-white">St. Anthony's College</h3>
-                <div className="flex items-center text-zinc-400 text-sm mb-2">
-                  <span className="material-symbols-rounded text-base mr-1">calendar_month</span>
+                <h3 className="text-[17px] font-semibold text-white">St. Anthony's College</h3>
+                <div className="flex items-center text-zinc-400 text-sm mb-1">
+                  <span className="material-symbols-rounded text-[14px] mr-1">calendar_month</span>
                   2013 – 2019
                 </div>
-                <p className="text-zinc-300">
-                  Completed secondary education with a focus on science and mathematics. Built the foundation for my interest in technology and problem solving.
+                <p className="text-zinc-300 text-[14px]">
+                  Completed GCE A/l's on Physical science stream (AAC) . Built the foundation for my interest in technology and problem solving.
                 </p>
               </div>
             </div>

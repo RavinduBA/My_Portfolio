@@ -16,7 +16,7 @@ className='pt-28 lg:pt-36'>
     <div>
         <div className='flex items-center gap-3'>
             <figure className='img-box w-9 h-9 rounded-lg'>
-                <img src="/images/avatar-1.jpg"
+                <img src="/images/new.jpg"
                 width={40}
                 height={40}
                 alt="Henry clark portrait"
@@ -38,7 +38,7 @@ className='pt-28 lg:pt-36'>
          </h2>
 
          <p className='text-zinc-300 mb-5 md:mb-8 md:text-l bg-zinc-800 
-         w-fit px-4 py-2 rounded-md flex items-center'>
+         w-fit px-4 py-2 rounded-lg flex items-center hover:bg-zinc-700'>
            Ravindu Abeysinghe
            </p>
 

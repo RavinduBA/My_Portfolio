@@ -22,9 +22,9 @@ const Header = () => {
           href="/"
           className='logo'
           >
-            <img src="/images/logo.svg"
-            width={40}
-            height={40} 
+            <img src="/images/logo.png"
+            width={35}
+            height={35} 
             alt="Ravindu Abeysinghe" />          
           </a>
         </h1>
