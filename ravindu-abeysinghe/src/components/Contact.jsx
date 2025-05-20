@@ -47,10 +47,10 @@ const Contact = () => {
               Reach out today to discuss your project needs and start collaborating on something amazing!
               </p>
 
-              <p className='text-zinc-400 mt-2 text-xl max-w-[60ch] lg:max-w-[35ch]'>
+              <p className='text-zinc-400 mt-2 text-[15px] max-w-[60ch] lg:max-w-[35ch]'>
               Email
               </p>
-              <p className='text-zinc-400 mt-1 mb-8 max-w-[60ch] lg:max-w-[35ch]'>
+              <p className='text-zinc-200  text-[17px] mt-1 mb-8 max-w-[60ch] lg:max-w-[35ch]'>
               ravindubandaraha@gmail.com
               </p>
            
@@ -88,7 +88,7 @@ const Contact = () => {
                   id="name"
                   autoComplete='name'
                   required
-                  placeholder='Ravindu Abeysinghe'
+                  placeholder='Robert De Niro'
                   className='text-field' 
                   />
                 </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                   id="email"
                   autoComplete='email'
                   required
-                  placeholder='Ravindubandaraha@gmail.com'
+                  placeholder='Robertdeniro@gmail.com'
                   className='text-field' 
                   />
                 </div>
