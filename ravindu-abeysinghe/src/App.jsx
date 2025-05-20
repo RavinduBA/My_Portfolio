@@ -9,7 +9,6 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Experience from './components/Experience';
-import ParticlesComponent from './components/particles';
 
 const App = () => {
   return (
