@@ -8,11 +8,14 @@ import Work from './components/Work';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Experience from './components/Experience';
+import { Analytics } from '@vercel/analytics/react';
+
+
 
 const App = () => {
   return (
     <>
+    <Analytics />
     <Header />
     <main>
      
