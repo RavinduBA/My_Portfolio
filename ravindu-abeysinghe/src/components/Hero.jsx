@@ -46,7 +46,7 @@ className='pt-28 lg:pt-36'>
          <ButtonPrimary
           label="Download CV"
           icon="download"
-          href="/images/cv.pdf"  // Path to your PDF file
+          href="/images/fake.pdf"  // Path to your PDF file
           downloadFile="Ravindu_Abeysinghe_CV.pdf"  // Name that will appear when downloaded
         />
 
