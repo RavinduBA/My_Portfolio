@@ -26,6 +26,11 @@ const skillItem = [
       desc: 'Interaction'
     },
     {
+      imgSrc: '/images/t.png',
+      label: 'TypeScript',
+      desc: 'Interaction'
+    },
+    {
       imgSrc: '/images/nodejs.svg',
       label: 'NodeJS',
       desc: 'Web Server'
@@ -39,9 +44,25 @@ const skillItem = [
       imgSrc: '/images/mongodb.svg',
       label: 'MongoDB',
       desc: 'Database'
+    },{
+      imgSrc: '/images/Next.png',
+      label: 'Next.js',
+      desc: 'Framework'
     },
     
     {
+      imgSrc: '/images/Astro.png',
+      label: 'Astro',
+      desc: 'Framework'
+    }, {
+      imgSrc: '/images/streamlit.png',
+      label: 'Streamlit',
+      desc: 'Framework'
+    }, {
+      imgSrc: '/images/Csharp.png',
+      label: 'C#',
+      desc: 'Language'
+    }, {
       imgSrc: '/images/tailwindcss.svg',
       label: 'TailwindCSS',
       desc: 'User Interface'
@@ -51,6 +72,8 @@ const skillItem = [
       label: 'AWS',
       desc: ' Cloud platform'
     }
+
+    
     ,{
       imgSrc: '/images/pn.png',
       label: 'React Native',
@@ -62,14 +85,14 @@ const skillItem = [
     }
     ,
     {
-      imgSrc: '/images/python.png',
+      imgSrc: '/images/Python.png',
       label: 'Python',
       desc: 'Language'
     },
     {
       imgSrc: '/images/sql.png',
       label: 'MYSQL',
-      desc: 'Database'
+      desc: 'DBMS'
     },
     {
       imgSrc: '/images/git.png',
@@ -82,7 +105,7 @@ const skillItem = [
       desc: 'Development'
     },
     {
-      imgSrc: '/images/bt.jpeg',
+      imgSrc: '/images/bt.png',
       label: 'Bootstrap',
       desc: 'CSS framework'
     },
@@ -92,19 +115,14 @@ const skillItem = [
       desc: 'BaaS'
     },
     {
-      imgSrc: '/images/d.jpeg',
+      imgSrc: '/images/d.png',
       label: 'Docker',
       desc: 'Containerization '
     },
     {
-      imgSrc: '/images/download.png',
+      imgSrc: '/images/j.png',
       label: 'Java',
       desc: 'Language'
-    },
-    {
-      imgSrc: '/images/t.jpeg',
-      label: 'TypeScript',
-      desc: 'Interaction'
     }
      
   ];
@@ -122,7 +140,7 @@ const Skill = () => {
             Discover the powerful tools and technologies I use to create exceptional, high-performing websites & 
             applications.
             </p>
-            <div className='grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
+            <div className='grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6'>
            {
             skillItem.map(({imgSrc, label, desc},key) =>
             (
