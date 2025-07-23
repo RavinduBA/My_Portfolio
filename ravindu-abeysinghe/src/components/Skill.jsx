@@ -83,7 +83,7 @@ const skillItem = [
     }
     ,
     {
-      imgSrc: '/images/Python.png',
+      imgSrc: '/images/python.png',
       label: 'Python',
       desc: 'Language'
     },
