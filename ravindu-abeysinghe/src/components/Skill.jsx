@@ -68,14 +68,12 @@ const skillItem = [
       desc: 'User Interface'
     },
     {
-      imgSrc: '/images/aws.jpeg',
+      imgSrc: '/images/aws.png',
       label: 'AWS',
       desc: ' Cloud platform'
-    }
-
-    
-    ,{
-      imgSrc: '/images/pn.png',
+    },
+    {
+      imgSrc: '/images/react.svg',
       label: 'React Native',
       desc: 'Framework'
     },{
