@@ -8,7 +8,27 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  @apply bg-zinc-900 text-zinc-50
+  @apply bg-zinc-900 text-zinc-50;
+}
+
+body.light {
+  @apply bg-zinc-50 text-zinc-900;
+}
+
+.light .navbar {
+  @apply bg-zinc-900/10;
+}
+.light .nav-link {
+  @apply text-zinc-900/50 hover:text-zinc-900;
+}
+.light .nav-link.active {
+  @apply text-zinc-50;
+}
+.light .navbar .active-box {
+  @apply bg-zinc-900;
+}
+.light .btn-secondary {
+  @apply bg-zinc-900 text-zinc-50 active:bg-zinc-900/80;
 }
 
 /* Typography */

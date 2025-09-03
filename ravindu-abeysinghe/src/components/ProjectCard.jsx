@@ -1,4 +1,5 @@
 import React from 'react'
+import { Github } from 'lucide-react';
 //Node modules
 import PropTypes from 'prop-types'
 
@@ -8,11 +9,12 @@ const ProjectCard = ({
     tags,
     projectLink,
     description,
-    classes
+    classes,
+    onImgClick
 }) => {
   return (
     <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors " + classes}>
-        <figure className='h-50 img-box rounded-lg mb-4 overflow-hidden'>
+        <figure className='h-50 img-box rounded-lg mb-4 overflow-hidden' style={{cursor: 'pointer'}} onClick={() => onImgClick && onImgClick(imgSrc)}>
             <img
             src={imgSrc}
             alt={title}
@@ -20,7 +22,7 @@ const ProjectCard = ({
             className='img-cover w-full h-full object-cover' />
         </figure>
         <div>
-            <h3 className=' mb-1 text-[18px]  font-semibold text-zinc-100'>
+            <h3 className=' mb-1 text-[15px]  font-semibold text-zinc-100'>
                 {title}
             </h3>
             
@@ -30,37 +32,33 @@ const ProjectCard = ({
                 </p>
             )}
             
-            <div className='flex flex-wrap items-center gap-2 '>
-                {tags.map((label, key) => (
-                <span
-                    key={key}
-                    className='h-5 text-xs text-zinc-300 bg-zinc-50/5 grid items-center px-3 rounded-lg'
+            <div className='flex items-center justify-between gap-2 mt-3'>
+                <div className='flex flex-wrap items-center gap-2'>
+                    {tags.map((label, key) => (
+                        <span
+                            key={key}
+                            className='h-5 text-xs text-zinc-300 bg-zinc-50/5 grid items-center px-3 rounded-lg'
+                        >
+                            {label}
+                        </span>
+                    ))}
+                </div>
+                <a
+                    href={projectLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='w-8 h-8 rounded-full grid place-items-center bg-sky-400 text-zinc-950 shrink-0 hover:bg-sky-500 transition-colors ml-2'
+                    aria-label='View on GitHub'
+                    onClick={e => e.stopPropagation()}
                 >
-                    {label}
-                </span>
-                ))}
-            </div>  
-            
-        <div className=' y-40 flex justify-end'>
-            <div className='w-8 h-8 rounded-lg grid
-            place-items-center bg-sky-400 text-zinc-950 shrink-0'>
-                <span
-                className='material-symbols-rounded'
-                aria-hidden='true'
-                >
-                    arrow_outward
-                </span>
+                    <Github size={20} />
+                </a>
             </div>
-        </div>
 
         </div>
       
-        <a
-        href={projectLink}
-        target='_blank'
-        rel="noopener noreferrer"
-        className='absolute inset-0'
-        ></a>
+    {/* Removed overlay link, only GitHub icon is clickable now */}
+
     </div>
   )
 }
@@ -71,7 +69,8 @@ ProjectCard.propTypes = {
     tags: PropTypes.array.isRequired,
     projectLink: PropTypes.string,
     description: PropTypes.string,
-    classes: PropTypes.string
+    classes: PropTypes.string,
+    onImgClick: PropTypes.func
 }
 
 export default ProjectCard
