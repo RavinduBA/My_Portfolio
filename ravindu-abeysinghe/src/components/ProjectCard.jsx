@@ -10,20 +10,14 @@ const ProjectCard = ({
     projectLink,
     description,
     classes,
-    onImgClick,
     onProjectClick
 }) => {
   return (
     <div 
       className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors cursor-pointer " + classes} 
-      onClick={(e) => {
-        console.log('Card clicked, onProjectClick:', onProjectClick);
-        if (onProjectClick) {
-          onProjectClick();
-        }
-      }}
+      onClick={onProjectClick}
     >
-        <figure className='h-50 img-box rounded-lg mb-4 overflow-hidden' onClick={(e) => { e.stopPropagation(); onImgClick && onImgClick(imgSrc); }}>
+        <figure className='h-50 img-box rounded-lg mb-4 overflow-hidden'>
             <img
             src={imgSrc}
             alt={title}
@@ -66,8 +60,6 @@ const ProjectCard = ({
 
         </div>
       
-    {/* Removed overlay link, only GitHub icon is clickable now */}
-
     </div>
   )
 }
@@ -79,7 +71,6 @@ ProjectCard.propTypes = {
     projectLink: PropTypes.string,
     description: PropTypes.string,
     classes: PropTypes.string,
-    onImgClick: PropTypes.func,
     onProjectClick: PropTypes.func
 }
 
