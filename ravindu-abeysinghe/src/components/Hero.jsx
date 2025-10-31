@@ -58,10 +58,10 @@ className='pt-28 lg:pt-36'>
          </div>
     </div>
     <div className='hidden lg:block'>
-        <figure className='w-full max-w-[480px] ml-auto
-        bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px]
+        <figure className='w-full max-w-[400px] ml-auto
+        bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[100px]
         overflow-hidden '>
-            <img src="/images/me.png" 
+            <img src="/images/ME.jpg" 
             width= {656}
             height={800}
             alt="Ravindu Abeysighe"

@@ -10,11 +10,20 @@ const ProjectCard = ({
     projectLink,
     description,
     classes,
-    onImgClick
+    onImgClick,
+    onProjectClick
 }) => {
   return (
-    <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors " + classes}>
-        <figure className='h-50 img-box rounded-lg mb-4 overflow-hidden' style={{cursor: 'pointer'}} onClick={() => onImgClick && onImgClick(imgSrc)}>
+    <div 
+      className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors cursor-pointer " + classes} 
+      onClick={(e) => {
+        console.log('Card clicked, onProjectClick:', onProjectClick);
+        if (onProjectClick) {
+          onProjectClick();
+        }
+      }}
+    >
+        <figure className='h-50 img-box rounded-lg mb-4 overflow-hidden' onClick={(e) => { e.stopPropagation(); onImgClick && onImgClick(imgSrc); }}>
             <img
             src={imgSrc}
             alt={title}
@@ -70,7 +79,8 @@ ProjectCard.propTypes = {
     projectLink: PropTypes.string,
     description: PropTypes.string,
     classes: PropTypes.string,
-    onImgClick: PropTypes.func
+    onImgClick: PropTypes.func,
+    onProjectClick: PropTypes.func
 }
 
 export default ProjectCard

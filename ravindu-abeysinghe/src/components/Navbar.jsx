@@ -34,8 +34,10 @@ const Navbar = ({ navOpen, activeSection }) => {
   // Update active box when activeSection changes (from scroll)
   useEffect(() => {
     if (activeSection && navLinksRefs.current[activeSection]) {
-      // Remove active class from previous link
-      lastActiveLink.current?.classList.remove('active');
+      // Remove active class from ALL links first
+      Object.values(navLinksRefs.current).forEach(link => {
+        if (link) link.classList.remove('active');
+      });
       
       // Add active class to current section link
       const currentLink = navLinksRefs.current[activeSection];
