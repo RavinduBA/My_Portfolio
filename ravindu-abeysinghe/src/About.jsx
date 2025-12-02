@@ -5,11 +5,11 @@ import React, {useState} from 'react'
 const aboutItems = [
     {
       label: 'Project done',
-      number: 15
+      number: 20
     },
     {
-      label: 'Technologies Learned',
-      number: 10
+      label: 'Technologies ',
+      number: 15
     }
   ];
 
@@ -26,7 +26,7 @@ const About = () => {
         <div className='container'>
             <div className='bg-zinc-800/50 p-7 rounded-2xl md:p-12'>
                 <p className='text-zinc-300 mb-4 md:mb-8 md:text-l '>
-                Hi! I’m Ravindu, a Computer Engineering student and former engineering intern passionate about web and app development. I merge technical know-how with
+                Hi! I’m Ravindu, a Computer Engineer and former engineering intern passionate about web and app development. I merge technical know-how with
                  creative thinking to deliver user-centric applications that look great and work flawlessly. A software engineer in the making, dedicated to turning ideas
                   into impactful digital realities, one app at a time .....
                 </p>  
@@ -123,10 +123,10 @@ const About = () => {
                 </div>
                 <div className="flex items-center text-zinc-400 text-sm mb-1">
                   <span className="material-symbols-rounded text-[14px] mr-1">calendar_month</span>
-                  2021 – Present
+                  2021 – 2025
                 </div>
                 <p className="text-zinc-300 text-[14px]">
-                  Currently pursuing my undergraduate degree with a strong focus on software development, cloud computing & emerging technologies.
+                  Completed my undergraduate degree with a strong focus on software development, cloud computing & emerging technologies.
                 </p>
               </div>
               

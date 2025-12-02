@@ -5,6 +5,20 @@ import ProjectCard from './ProjectCard';
 import ProjectDetailModal from './ProjectDetailModal';
 
 const works = [
+  {
+      imgSrc: '/images/Mahajana.png',
+      title: 'Mahajana Supermarket App & Admin Dashboard',
+      tags: ['React native', 'NodeJS','SQL','ExpressJS'],
+      projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
+      description: 'Mahajana is a simple supermarket app where customers can browse products and view promotions. Mahajana Dash Pro is its admin dashboard for managing products, categories, branches, brands, and promotions.'
+    },
+    {
+      imgSrc: '/images/Checking.png',
+      title: 'CheckingCheckout Web & Mobile App',
+      tags: ['React', 'React Native','PostgreSQL','Supabase'],
+      projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
+      description: 'CheckingCheckout is our own multi-tenant hospitality management product for hotels and guesthouses, offering property management, bookings, financial tracking, and reporting . Providing a complete and seamless management system across both platforms'
+    },
    {
       imgSrc: '/images/AIP.png',
       title: 'AI Powered Knowledge Management System',

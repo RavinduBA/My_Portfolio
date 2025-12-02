@@ -23,7 +23,7 @@ const Experience = () => {
             </div>
             <div className="flex items-center text-zinc-400 text-sm mb-2">
               <span className="material-symbols-rounded text-base mr-1">calendar_month</span>
-              2021 – Present
+              2021 – 2025
             </div>
             <p className="text-zinc-300">
               Currently pursuing my undergraduate degree with a strong focus on software development, computer systems, and emerging technologies.
