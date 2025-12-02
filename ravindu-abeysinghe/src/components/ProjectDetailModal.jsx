@@ -24,7 +24,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
       onClick={onClose}
     >
       <div 
-        className="relative bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar" 
+        className="relative bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 rounded-2xl shadow-2xl max-w-7xl w-full max-h-[95vh] overflow-y-auto custom-scrollbar" 
         onClick={(e) => e.stopPropagation()}
         style={{
           scrollbarWidth: 'thin',
@@ -44,9 +44,9 @@ const ProjectDetailModal = ({ project, onClose }) => {
           <img
             src={images[currentImageIndex]}
             alt={`${project.title} - Image ${currentImageIndex + 1}`}
-            className="w-full h-[400px] object-cover transition-all duration-500"
+            className="w-full h-[500px] md:h-[600px] object-contain bg-zinc-950 transition-all duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent pointer-events-none"></div>
           
           {/* Navigation Arrows - Only show if multiple images */}
           {images.length > 1 && (
@@ -67,7 +67,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
               </button>
               
               {/* Image Indicators */}
-              <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                 {images.map((_, index) => (
                   <button
                     key={index}
@@ -91,6 +91,17 @@ const ProjectDetailModal = ({ project, onClose }) => {
             </div>
           )}
           
+          {/* GitHub Button - Bottom Right */}
+          <a
+            href={project.projectLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            className="absolute bottom-4 right-4 group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-zinc-900 font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-sky-400/50 z-10"
+          >
+            <Github size={18} className="group-hover:rotate-12 transition-transform duration-300" />
+            <span>View on GitHub</span>
+          </a>
+          
           {/* Title Overlay on Image */}
           <div className="absolute bottom-0 left-0 right-0 p-8">
             <h3 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-3 drop-shadow-lg">
@@ -111,32 +122,18 @@ const ProjectDetailModal = ({ project, onClose }) => {
         
         {/* Content Section */}
         <div className="p-8 md:p-10">
-          {/* Description */}
-          <div className="mb-8">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="h-1 w-12 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full"></div>
-              <h4 className="text-lg font-semibold text-sky-400">About This Project</h4>
+          {/* Project Details */}
+          {project.detailedDescription && (
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-1 w-12 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full"></div>
+                <h4 className="text-lg font-semibold text-sky-400">About This Project</h4>
+              </div>
+              <p className="text-zinc-300 text-base leading-relaxed whitespace-pre-line">
+                {project.detailedDescription}
+              </p>
             </div>
-            <p className="text-zinc-300 text-base leading-relaxed">
-              {project.description}
-            </p>
-          </div>
-          
-          {/* Action Button */}
-          <div className="flex justify-center pt-6 border-t border-zinc-700/50">
-            <a
-              href={project.projectLink}
-              target='_blank'
-              rel='noopener noreferrer'
-              className="group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-zinc-900 font-bold text-lg rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-sky-400/50 w-full md:w-auto"
-            >
-              <Github size={24} className="group-hover:rotate-12 transition-transform duration-300" />
-              <span>View on GitHub</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
+          )}
         </div>
       </div>
     </div>
@@ -151,6 +148,7 @@ ProjectDetailModal.propTypes = {
     tags: PropTypes.array.isRequired,
     projectLink: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    detailedDescription: PropTypes.string,
   }),
   onClose: PropTypes.func.isRequired,
 };

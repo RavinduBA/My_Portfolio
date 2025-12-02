@@ -24,7 +24,8 @@ const works = [
       title: 'Mahajana Supermarket App & Admin Dashboard',
       tags: ['React native', 'NodeJS','SQL','ExpressJS'],
       projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
-      description: 'Mahajana is a simple supermarket app where customers can browse products and view promotions. Mahajana Dash Pro is its admin dashboard for managing products, categories, branches, brands, and promotions.'
+      description: 'Mahajana is a simple supermarket app where customers can browse products and view promotions. Mahajana Dash Pro is its admin dashboard for managing products, categories, branches, brands, and promotions.',
+      detailedDescription: 'Mahajana is a comprehensive supermarket solution consisting of two main applications:\n\n🛒 Mahajana Mobile App:\nA customer-facing React Native application that allows users to browse products, view current promotions, and explore the supermarket catalog. The app provides a seamless shopping experience with an intuitive interface.\n\n💼 Mahajana Dash Pro:\nA powerful admin dashboard built for supermarket management. It enables administrators to manage products, categories, branches, brands, and promotional campaigns. The dashboard provides real-time insights and complete control over the supermarket operations.\n\nTechnologies Used:\n• React Native for cross-platform mobile development\n• Node.js & Express.js for robust backend services\n• SQL database for efficient data management\n• RESTful API architecture for seamless communication'
     },
     {
       imgSrc: '/images/Checking.png',
@@ -144,7 +145,7 @@ const Work = () => {
           My portfolio highlights
         </h2>
         <div className='grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]'>
-          {works.map(({imgSrc, title, tags, projectLink, description}, key) => (
+          {works.map(({imgSrc, images, title, tags, projectLink, description, detailedDescription}, key) => (
             <div
               key={key}
               ref={(el) => (cardRefs.current[key] = el)}
@@ -163,7 +164,7 @@ const Work = () => {
                 tags={tags}
                 projectLink={projectLink}
                 description={description}
-                onProjectClick={() => handleProjectClick({imgSrc, title, tags, projectLink, description})}
+                onProjectClick={() => handleProjectClick({imgSrc, images, title, tags, projectLink, description, detailedDescription})}
               />
             </div>
           ))}
