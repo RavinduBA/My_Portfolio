@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 
 const socialLinks = [
@@ -33,13 +33,44 @@ const socialLinks = [
   ];
 
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     
     <section 
     id='contact'
-    className="section">
+    className="section"
+    ref={sectionRef}>
         <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
-            <div className=' mb-12 lg:mb-0 lg:flex lg:flex-col'> 
+            <div className={`mb-12 lg:mb-0 lg:flex lg:flex-col transform transition-all duration-1000 ease-out ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+            }`}> 
               <h2 className="headline-2 lg:max-w-[18ch]">
                 Contact me for collaboration
               </h2>
@@ -72,7 +103,9 @@ const Contact = () => {
             <form 
             action="https://getform.io/f/aqomnkoa"
             method='POST'
-            className='xl:pl-10 2xl:pl-20'
+            className={`xl:pl-10 2xl:pl-20 transform transition-all duration-1000 ease-out delay-300 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`}
             >
               <div className='md:grid md:items-center md:grid-cols-2 md:gap-2'>
                 <div className='mb-4'>

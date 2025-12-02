@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 
 
 
@@ -17,14 +17,45 @@ const aboutItems = [
 const About = () => {
 
   const [showMore, setShowMore] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px',
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
 
   return (
     <section
     id="about"
-    className='section'>
+    className='section'
+    ref={sectionRef}>
         <div className='container'>
-            <div className='bg-zinc-800/50 p-7 rounded-2xl md:p-12'>
+            <div className={`bg-zinc-800/50 p-7 rounded-2xl md:p-12 transform transition-all duration-1000 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
                 <p className='text-zinc-300 mb-4 md:mb-8 md:text-l '>
                 Hi! I’m Ravindu, a Computer Engineer and former engineering intern passionate about web and app development. I merge technical know-how with
                  creative thinking to deliver user-centric applications that look great and work flawlessly. A software engineer in the making, dedicated to turning ideas

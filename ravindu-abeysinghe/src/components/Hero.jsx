@@ -13,7 +13,7 @@ id = "home"
 className='pt-28 lg:pt-36'>
 
 <div className='container items-center lg:grid lg:grid-cols-2 lg:gap-10 '>
-    <div>
+    <div className='animate-fade-in-up'>
         <div className='flex items-center gap-3'>
             <figure className='img-box w-9 h-9 rounded-lg'>
                 <img src="/images/new.jpg"
@@ -57,7 +57,7 @@ className='pt-28 lg:pt-36'>
                />
          </div>
     </div>
-    <div className='hidden lg:block'>
+    <div className='hidden lg:block animate-fade-in-right'>
         <figure className='w-full max-w-[400px] ml-auto
         bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[100px]
         overflow-hidden '>

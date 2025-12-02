@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 //components
 import ProjectCard from './ProjectCard';
@@ -7,6 +7,20 @@ import ProjectDetailModal from './ProjectDetailModal';
 const works = [
   {
       imgSrc: '/images/Mahajana.png',
+      images: [
+        '/images/Mahajana.png',
+        '/images/mahjanaApp1.png',
+        '/images/mahjanaApp2.png',
+        '/images/mahjanaApp3.png',
+        '/images/mahjanaApp4.png',
+        '/images/mahjanaApp5.png',
+        '/images/mahjanaD1.png',
+        '/images/mahjanaD2.png',
+        '/images/mahjanaD3.png',
+        '/images/mahjanaD4.png',
+        '/images/mahjanaD5.png',
+        '/images/mahjanaD6.png'
+      ],
       title: 'Mahajana Supermarket App & Admin Dashboard',
       tags: ['React native', 'NodeJS','SQL','ExpressJS'],
       projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
@@ -80,6 +94,8 @@ const works = [
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [visibleCards, setVisibleCards] = useState([]);
+  const cardRefs = useRef([]);
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
@@ -88,6 +104,35 @@ const Work = () => {
   const handleCloseProject = () => {
     setSelectedProject(null);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = cardRefs.current.indexOf(entry.target);
+            if (index !== -1 && !visibleCards.includes(index)) {
+              setVisibleCards((prev) => [...prev, index]);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, [visibleCards]);
 
   return (
     <section 
@@ -100,15 +145,27 @@ const Work = () => {
         </h2>
         <div className='grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]'>
           {works.map(({imgSrc, title, tags, projectLink, description}, key) => (
-            <ProjectCard
+            <div
               key={key}
-              imgSrc={imgSrc}
-              title={title}
-              tags={tags}
-              projectLink={projectLink}
-              description={description}
-              onProjectClick={() => handleProjectClick({imgSrc, title, tags, projectLink, description})}
-            />
+              ref={(el) => (cardRefs.current[key] = el)}
+              className={`transform transition-all duration-700 ease-out ${
+                visibleCards.includes(key)
+                  ? 'opacity-100 translate-y-0 scale-100'
+                  : 'opacity-0 translate-y-10 scale-95'
+              }`}
+              style={{
+                transitionDelay: `${(key % 3) * 100}ms`,
+              }}
+            >
+              <ProjectCard
+                imgSrc={imgSrc}
+                title={title}
+                tags={tags}
+                projectLink={projectLink}
+                description={description}
+                onProjectClick={() => handleProjectClick({imgSrc, title, tags, projectLink, description})}
+              />
+            </div>
           ))}
         </div>
         

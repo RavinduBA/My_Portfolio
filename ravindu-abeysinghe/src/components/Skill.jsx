@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 //components
 import SkillCard from './SkillCard'
@@ -128,6 +128,38 @@ const skillItem = [
 
 
 const Skill = () => {
+  const [visibleCards, setVisibleCards] = useState([]);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = cardRefs.current.indexOf(entry.target);
+            if (index !== -1 && !visibleCards.includes(index)) {
+              setVisibleCards((prev) => [...prev, index]);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, [visibleCards]);
+
   return (
     <section className='section' id="skill">
         <div className='container'>
@@ -142,12 +174,23 @@ const Skill = () => {
            {
             skillItem.map(({imgSrc, label, desc},key) =>
             (
-              <SkillCard 
-              key={key}
-              imgSrc={imgSrc}
-              label={label}
-              desc={desc} />
-              
+              <div
+                key={key}
+                ref={(el) => (cardRefs.current[key] = el)}
+                className={`transform transition-all duration-500 ease-out ${
+                  visibleCards.includes(key)
+                    ? 'opacity-100 translate-y-0 scale-100'
+                    : 'opacity-0 translate-y-8 scale-90'
+                }`}
+                style={{
+                  transitionDelay: `${(key % 6) * 80}ms`,
+                }}
+              >
+                <SkillCard 
+                  imgSrc={imgSrc}
+                  label={label}
+                  desc={desc} />
+              </div>
             )
             )
            }
