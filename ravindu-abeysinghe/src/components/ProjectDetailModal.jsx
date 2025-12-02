@@ -1,21 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import PropTypes from 'prop-types';
 
 const ProjectDetailModal = ({ project, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  
+  // Create images array - if project has images array use it, otherwise use imgSrc
+  const images = project?.images || (project?.imgSrc ? [project.imgSrc] : []);
+  
+  // Auto-play carousel
+  useEffect(() => {
+    // Only auto-play if there are multiple images
+    if (images.length <= 1 || !isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 4000); // Change image every 4 seconds
+    
+    return () => clearInterval(interval);
+  }, [images.length, isAutoPlaying]);
   
   if (!project) return null;
-
-  // Create images array - if project has images array use it, otherwise use imgSrc
-  const images = project.images || [project.imgSrc];
   
   const nextImage = () => {
+    setIsAutoPlaying(false); // Pause auto-play when user interacts
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
 
   const prevImage = () => {
+    setIsAutoPlaying(false); // Pause auto-play when user interacts
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+  
+  const goToImage = (index) => {
+    setIsAutoPlaying(false); // Pause auto-play when user interacts
+    setCurrentImageIndex(index);
   };
 
   return (
@@ -71,7 +91,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
                 {images.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => setCurrentImageIndex(index)}
+                    onClick={() => goToImage(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
                       index === currentImageIndex
                         ? 'bg-sky-400 w-8'

@@ -83,13 +83,7 @@ const works = [
       projectLink: 'https://github.com/RavinduBA/Game-Of-Thrones-MobileApp',
       description: 'An ongoing mobile application that allows users to explore detailed profiles of Game of Thrones characters, including their backgrounds and house affiliations. The app features user Authentication ,persistent session handling, ensuring a smooth and personalized experience.'
     },
-    {
-      imgSrc: '/images/p6.jpg',
-      title: 'Keyboard for the Visually Impaired',
-      tags: ['Python', 'Arudino','Hardware'],
-      projectLink: 'https://github.com/RavinduBA/e19-co227-Keyboard-for-Visually-Impaired',
-      description: 'Designed & developed an innovative keyboard application tailored for visually impaired users, enabling accurate character input through intuitive key combinations. The system integrates auditory feedback to guide users as they type, creating an accessible & empowering typing experience that promotes independence.'
-    },
+    
   ];
 
 
