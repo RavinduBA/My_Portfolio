@@ -53,7 +53,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 bg-sky-400 hover:bg-sky-500 rounded-full w-10 h-10 flex items-center justify-center transition-all hover:rotate-90 duration-300 z-20"
+          className="absolute top-4 right-4 bg-sky-400 hover:bg-sky-500 rounded-full w-6 h-6 flex items-center justify-center transition-all hover:rotate-90 duration-300 z-20"
           aria-label="Close project details"
         >
           <X size={24} className="text-zinc-900" />
@@ -118,13 +118,13 @@ const ProjectDetailModal = ({ project, onClose }) => {
             rel='noopener noreferrer'
             className="absolute bottom-4 right-4 group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-zinc-900 font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-sky-400/50 z-10"
           >
-            <Github size={18} className="group-hover:rotate-12 transition-transform duration-300" />
+            <Github size={15} className="group-hover:rotate-12 transition-transform duration-300" />
             <span>View on GitHub</span>
           </a>
           
           {/* Title Overlay on Image */}
           <div className="absolute bottom-0 left-0 right-0 p-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-3 drop-shadow-lg">
+            <h3 className="text-2xl md:text-4xl font-bold text-zinc-50 mb-3 drop-shadow-lg">
               {project.title}
             </h3>
             <div className="flex flex-wrap gap-2">
