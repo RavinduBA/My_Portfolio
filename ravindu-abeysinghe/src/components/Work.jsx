@@ -21,10 +21,10 @@ const works = [
         '/images/mahjanaD5.png',
         '/images/mahjanaD6.png'
       ],
-      title: 'Mahajana Supermarket App & Admin Dashboard',
+      title: 'Mahajana Supermarket App & Dashboard',
       tags: ['React native', 'NodeJS','SQL','ExpressJS'],
       projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
-      description: 'Mahajana is a simple supermarket app where customers can browse products and view promotions. Mahajana Dash Pro is its admin dashboard for managing products, categories, branches, brands, and promotions.',
+      description: 'Mahajana is a complete supermarket platform consisting of a customer app for browsing, ordering products and an admin dashboard for managing products.',
       detailedDescription: 'Mahajana is a comprehensive supermarket solution consisting of two main applications:\n\n🛒 Mahajana Mobile App:\nA customer-facing React Native application that allows users to browse products, view current promotions, and explore the supermarket catalog. The app provides a seamless shopping experience with an intuitive interface.\n\n💼 Mahajana Dash Pro:\nA powerful admin dashboard built for supermarket management. It enables administrators to manage products, categories, branches, brands, and promotional campaigns. The dashboard provides real-time insights and complete control over the supermarket operations.\n\nTechnologies Used:\n• React Native for cross-platform mobile development\n• Node.js & Express.js for robust backend services\n• SQL database for efficient data management\n• RESTful API architecture for seamless communication'
     },
     {
@@ -47,20 +47,22 @@ const works = [
       
       tags: ['React', 'React Native','PostgreSQL','Supabase'],
       projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
-      description: 'CheckingCheckout is our own multi-tenant hospitality management product for hotels and guesthouses, offering property management, bookings, financial tracking, and reporting . Providing a complete and seamless management system across both platforms',
+      description: 'CheckingCheckout is our own multi-tenant hospitality management product for hotels and guesthouses, offering property management, bookings, financial tracking .',
        detailedDescription:'CheckingCheckout is our own multi-tenant hospitality management product for hotels and guesthouses, offering property management, bookings, financial tracking, and reporting . Providing a complete and seamless management system across both platforms',
     },
    {
       imgSrc: '/images/AIP.png',
       images: [
         '/images/AIP.png',
-        
-        
+        '/images/ai1.png',
+        '/images/ai2.png',
+'/images/ai3.png',
+'/images/ai4.png',
       ],
       title: 'AI Powered Knowledge Management System',
       tags: ['React', 'RAG',' Langchain','Flask'],
       projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
-      description: 'Built a platform to help the institute store, access, and interact with internal knowledge more effectively. Key features include an AI-powered RAG-based Q&A model, real-time summarization, a user-friendly web interface, and secure user authentication.'
+      description: 'Built a platform to help the institute store, access, and interact with internal knowledge more effectively. '
 ,detailedDescription:' Built a platform to help the institute store, access, and interact with internal knowledge more effectively. Key features include an AI-powered RAG-based Q&A model, real-time summarization, a user-friendly web interface, and secure user authentication.'
 ,
     },
@@ -68,13 +70,16 @@ const works = [
       imgSrc: '/images/p2.png',
       images: [
         '/images/p2.png',
-        
-        
+         '/images/eve1.png',
+         '/images/eve2.png',
+         '/images/eve3.png',
+         '/images/eve4.png',
+         '/images/eve5.png',
       ],
       title: 'Event Attendance management System',
-      tags: ['React', 'AWS',' Mongo','NodeJS'],
+      tags: ['React', 'AWS',' Mongo','NodeJS', "IOT"],
       projectLink: 'https://github.com/RavinduBA/e19-3yp-Event-Attendance-Management-System/',
-      description: 'A comprehensive system designed to enhance the tracking of attendees during events such as conferences and workshops. The system includes a web application for organizers to manage conference rooms, schedule sessions, monitor real-time attendance, and session analytics.'
+      description: 'A comprehensive system designed to enhance the tracking of attendees during events such as conferences and workshops. '
     ,detailedDescription:'A comprehensive system designed to enhance the tracking of attendees during events such as conferences and workshops. The system includes a web application for organizers to manage conference rooms, schedule sessions, monitor real-time attendance, and session analytics.'
 ,
     },
@@ -88,7 +93,7 @@ const works = [
       title: 'Baby Development Tracking System',
       tags: ['Android Studio', 'Firebase','API'],
       projectLink: 'https://github.com/RavinduBA/e19-co225-Baby-Developement-Tracking-System-Mobileapplication/',
-      description: 'A mobile application designed to help parents, doctors & health midwives track and monitor the development of children aged 0 to 5 years. It enables registration, vaccination tracking, growth monitoring & medical professionals to record and provide recommendations.'
+      description: 'A mobile application designed to help parents, doctors & health midwives track and monitor the development of children aged 0 to 5 years. '
     ,detailedDescription:'A mobile application designed to help parents, doctors & health midwives track and monitor the development of children aged 0 to 5 years. It enables registration, vaccination tracking, growth monitoring & medical professionals to record and provide recommendations.'
 ,
     },
@@ -96,13 +101,17 @@ const works = [
       imgSrc: '/images/p4.png',
        images: [
         '/images/p4.png',
+        '/images/l1.png',
+        '/images/l2.png',
+        '/images/l3.png',
+        '/images/l4.png',
         
         
       ],
       title: 'Library Management System',
       tags: ['PHP', 'MYSQL',"SCSS"],
       projectLink: 'https://github.com/RavinduBA/librarymanagmentsystemD/',
-      description: 'A web-based Library Management System that allows users to register/login, search and view books, and track lending activities. The solution enhances library processes seamlessly, offering improved user experiences.'
+      description: 'A web-based Library Management System that allows users to register/login, search and view books, and track lending activities. '
      ,detailedDescription:'A web-based Library Management System that allows users to register/login, search and view books, and track lending activities. The solution enhances library processes seamlessly, offering improved user experiences.'
 ,
     },{
@@ -115,7 +124,7 @@ const works = [
       title: 'Rythem Nation Blog Site',
       tags: ['Astro', 'TailwindCSS','JavaScript'],
       projectLink: 'https://github.com/RavinduBA/Rythem-Nation-Astro-blog-site-',
-      description: 'A modern, dynamic web application built with Astro, Tailwind CSS, and TypeScript that celebrates music culture, showcases emerging artists, and explores the universal language of rhythm. (Currently under construction.'
+      description: 'A modern, dynamic web application that celebrates music culture, showcases emerging artists, and explores the universal language of rhythm.'
    ,detailedDescription:' A modern, dynamic web application built with Astro, Tailwind CSS, and TypeScript that celebrates music culture, showcases emerging artists, and explores the universal language of rhythm. (Currently under construction.'
 ,
     },
@@ -123,13 +132,14 @@ const works = [
       imgSrc: '/images/p3.png',
        images: [
         '/images/p3.png',
-        
+        '/images/mv1.png',
+        '/images/mv2.png',
         
       ],
       title: 'Movie Review Web App',
       tags: ['SpringBoot', 'React','API'],
       projectLink: 'https://github.com/RavinduBA/Movie-Review-WebApp',
-      description: 'An ongoing full-stack web application that allows users to Register/login, search for movies, watch trailers, submit reviews & rate films. The backend is built with Spring Boot, using MongoDB for data storage, while the frontend is developed with React for a responsive user experience. '
+      description: 'An ongoing full-stack web application that allows users to Register/login, search for movies, watch trailers, submit reviews & rate films. '
    ,detailedDescription :'An ongoing full-stack web application that allows users to Register/login, search for movies, watch trailers, submit reviews & rate films. The backend is built with Spring Boot, using MongoDB for data storage, while the frontend is developed with React for a responsive user experience. '
 
     },
@@ -143,7 +153,7 @@ const works = [
       title: 'Game of Thrones MobileApp',
       tags: ['React Native', 'Firebase','SCSS'],
       projectLink: 'https://github.com/RavinduBA/Game-Of-Thrones-MobileApp',
-      description: 'An ongoing mobile application that allows users to explore detailed profiles of Game of Thrones characters, including their backgrounds and house affiliations. The app features user Authentication ,persistent session handling, ensuring a smooth and personalized experience.'
+      description: 'A mobile application that allows users to explore detailed profiles of Game of Thrones characters, including their backgrounds and house affiliations. '
     ,detailedDescription:'An ongoing mobile application that allows users to explore detailed profiles of Game of Thrones characters, including their backgrounds and house affiliations. The app features user Authentication ,persistent session handling, ensuring a smooth and personalized experience.'
 ,
     },

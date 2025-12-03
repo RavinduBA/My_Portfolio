@@ -36,11 +36,11 @@ const ProjectCard = ({
             )}
             
             <div className='flex items-center justify-between gap-2 mt-3'>
-                <div className='flex flex-wrap items-center gap-2'>
+                <div className='flex flex-wrap items-center gap-1'>
                     {tags.map((label, key) => (
                         <span
                             key={key}
-                            className='h-5 text-xs text-zinc-300 bg-zinc-50/5 grid items-center px-3 rounded-lg'
+                            className='h-5 text-[10px] text-zinc-300 bg-zinc-50/5 grid items-center px-3 rounded-lg'
                         >
                             {label}
                         </span>
@@ -50,11 +50,11 @@ const ProjectCard = ({
                     href={projectLink}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='w-8 h-8 rounded-full grid place-items-center bg-sky-400 text-zinc-950 shrink-0 hover:bg-sky-500 transition-colors ml-2'
+                    className='w-6 h-6 rounded-full grid place-items-center bg-sky-400 text-zinc-950 shrink-0 hover:bg-sky-500 transition-colors ml-1'
                     aria-label='View on GitHub'
                     onClick={e => e.stopPropagation()}
                 >
-                    <Github size={20} />
+                    <Github size={16} />
                 </a>
             </div>
 
