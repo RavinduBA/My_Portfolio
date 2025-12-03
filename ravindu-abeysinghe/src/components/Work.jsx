@@ -23,7 +23,7 @@ const works = [
       ],
       title: 'Mahajana Supermarket App & Dashboard',
       tags: ['React native', 'NodeJS','SQL','ExpressJS'],
-      projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
+      projectLink: 'https://github.com/RavinduBA/mahajana-dash-pro',
       description: 'Mahajana is a complete supermarket platform consisting of a customer app for browsing, ordering products and an admin dashboard for managing products.',
       detailedDescription: 'Mahajana is a comprehensive supermarket solution consisting of two main applications:\n\n🛒 Mahajana Mobile App:\nA customer-facing React Native application that allows users to browse products, view current promotions, and explore the supermarket catalog. The app provides a seamless shopping experience with an intuitive interface.\n\n💼 Mahajana Dash Pro:\nA powerful admin dashboard built for supermarket management. It enables administrators to manage products, categories, branches, brands, and promotional campaigns. The dashboard provides real-time insights and complete control over the supermarket operations.\n\nTechnologies Used:\n• React Native for cross-platform mobile development\n• Node.js & Express.js for robust backend services\n• SQL database for efficient data management\n• RESTful API architecture for seamless communication'
     },
@@ -46,7 +46,8 @@ const works = [
       title: 'CheckingCheckout Web & Mobile App',
       
       tags: ['React', 'React Native','PostgreSQL','Supabase'],
-      projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
+      projectLink: 'https://github.com/RavinduBA/Checking-Checkout-Mobile',
+      liveLink: 'https://app.checkingcheckout.com/',
       description: 'CheckingCheckout is our own multi-tenant hospitality management product for hotels and guesthouses, offering property management, bookings, financial tracking .',
        detailedDescription:'CheckingCheckout is our own multi-tenant hospitality management product for hotels and guesthouses, offering property management, bookings, financial tracking, and reporting . Providing a complete and seamless management system across both platforms',
     },
@@ -60,7 +61,7 @@ const works = [
 '/images/ai4.png',
       ],
       title: 'AI Powered Knowledge Management System',
-      tags: ['React', 'RAG',' Langchain','Flask'],
+      tags: ['React', 'RAG',' Langchain','Flask', 'AWS'],
       projectLink: 'https://github.com/RavinduBA/e19-4yp-AI-Powered-Knowledge-Management-System',
       description: 'Built a platform to help the institute store, access, and interact with internal knowledge more effectively. '
 ,detailedDescription:' Built a platform to help the institute store, access, and interact with internal knowledge more effectively. Key features include an AI-powered RAG-based Q&A model, real-time summarization, a user-friendly web interface, and secure user authentication.'
@@ -87,11 +88,15 @@ const works = [
       imgSrc: '/images/p1.png',
        images: [
         '/images/p1.png',
-        
-        
+        '/images/ba1.png',
+        '/images/ba2.png',
+        '/images/ba3.png',
+        '/images/ba4.png',
+        '/images/ba5.png',
+        '/images/ba6.png',
       ],
       title: 'Baby Development Tracking System',
-      tags: ['Android Studio', 'Firebase','API'],
+      tags: ['Android Studio', 'Firebase','Java','API'],
       projectLink: 'https://github.com/RavinduBA/e19-co225-Baby-Developement-Tracking-System-Mobileapplication/',
       description: 'A mobile application designed to help parents, doctors & health midwives track and monitor the development of children aged 0 to 5 years. '
     ,detailedDescription:'A mobile application designed to help parents, doctors & health midwives track and monitor the development of children aged 0 to 5 years. It enables registration, vaccination tracking, growth monitoring & medical professionals to record and provide recommendations.'
@@ -105,8 +110,6 @@ const works = [
         '/images/l2.png',
         '/images/l3.png',
         '/images/l4.png',
-        
-        
       ],
       title: 'Library Management System',
       tags: ['PHP', 'MYSQL',"SCSS"],
@@ -146,8 +149,12 @@ const works = [
     {
       imgSrc: '/images/p5.png',
        images: [
-        '/images/5.png',
-        
+        '/images/p5.png',
+        '/images/got1.jpg',
+'/images/got2.jpg',
+'/images/got3.jpg',
+'/images/got4.jpg',
+'/images/got5.jpg',
         
       ],
       title: 'Game of Thrones MobileApp',
@@ -213,7 +220,7 @@ const Work = () => {
           My portfolio highlights
         </h2>
         <div className='grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]'>
-          {works.map(({imgSrc, images, title, tags, projectLink, description, detailedDescription}, key) => (
+          {works.map(({imgSrc, images, title, tags, projectLink, liveLink, description, detailedDescription}, key) => (
             <div
               key={key}
               ref={(el) => (cardRefs.current[key] = el)}
@@ -232,7 +239,7 @@ const Work = () => {
                 tags={tags}
                 projectLink={projectLink}
                 description={description}
-                onProjectClick={() => handleProjectClick({imgSrc, images, title, tags, projectLink, description, detailedDescription})}
+                onProjectClick={() => handleProjectClick({imgSrc, images, title, tags, projectLink, liveLink, description, detailedDescription})}
               />
             </div>
           ))}

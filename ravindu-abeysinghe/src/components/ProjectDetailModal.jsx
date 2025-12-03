@@ -111,16 +111,31 @@ const ProjectDetailModal = ({ project, onClose }) => {
             </div>
           )}
           
-          {/* GitHub Button - Bottom Right */}
-          <a
-            href={project.projectLink}
-            target='_blank'
-            rel='noopener noreferrer'
-            className="absolute bottom-4 right-4 group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-zinc-900 font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-sky-400/50 z-10"
-          >
-            <Github size={15} className="group-hover:rotate-12 transition-transform duration-300" />
-            <span>View on GitHub</span>
-          </a>
+          {/* Action Buttons - Bottom Right */}
+          <div className="absolute bottom-4 right-4 flex items-center gap-2 z-10">
+            {project.liveLink && (
+              <a
+                href={project.liveLink}
+                target='_blank'
+                rel='noopener noreferrer'
+                className="group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-400 to-green-500 hover:from-emerald-500 hover:to-green-600 text-zinc-900 font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-400/50"
+              >
+                <svg className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            )}
+            <a
+              href={project.projectLink}
+              target='_blank'
+              rel='noopener noreferrer'
+              className="group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-zinc-900 font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-sky-400/50"
+            >
+              <Github size={15} className="group-hover:rotate-12 transition-transform duration-300" />
+              <span>View on GitHub</span>
+            </a>
+          </div>
           
           {/* Title Overlay on Image */}
           <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -167,6 +182,7 @@ ProjectDetailModal.propTypes = {
     title: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired,
     projectLink: PropTypes.string.isRequired,
+    liveLink: PropTypes.string,
     description: PropTypes.string.isRequired,
     detailedDescription: PropTypes.string,
   }),
