@@ -40,6 +40,11 @@ const skillItem = [
       label: 'ExpressJS',
       desc: 'Node Framework'
     },
+     {
+      imgSrc: '/images/Spring.svg',
+      label: 'SpringBoot',
+      desc: 'Database'
+    },
     {
       imgSrc: '/images/mongodb.svg',
       label: 'MongoDB',
@@ -81,11 +86,21 @@ const skillItem = [
       label: 'PHP',
       desc: 'Server language'
     }
-    ,
+    , 
     {
       imgSrc: '/images/python.png',
       label: 'Python',
       desc: 'Language'
+    },
+    ,{
+      imgSrc: '/images/Flask.svg',
+      label: 'Flask',
+      desc: 'Server language'
+    }
+    ,{
+      imgSrc: '/images/Firebase.svg',
+      label: 'Firebase',
+      desc: 'Server language'
     },
     {
       imgSrc: '/images/sql.png',
@@ -95,6 +110,14 @@ const skillItem = [
     {
       imgSrc: '/images/git.png',
       label: 'Git',
+      desc: 'Version Control '
+    }, {
+      imgSrc: '/images/BitBucket.svg',
+      label: 'BitBucket',
+      desc: 'Version Control '
+    }, {
+      imgSrc: '/images/GitHubActions.svg',
+      label: 'GitHub Actions',
       desc: 'Version Control '
     },
     {
@@ -106,11 +129,6 @@ const skillItem = [
       imgSrc: '/images/bt.png',
       label: 'Bootstrap',
       desc: 'CSS framework'
-    },
-    {
-      imgSrc: '/images/fi.png',
-      label: 'Firebase',
-      desc: 'BaaS'
     },
     {
       imgSrc: '/images/d.png',
@@ -170,7 +188,7 @@ const Skill = () => {
             Discover the powerful tools and technologies I use to create exceptional, high-performing websites & 
             applications.
             </p>
-            <div className='grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6'>
+            <div className='grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7'>
            {
             skillItem.map(({imgSrc, label, desc},key) =>
             (
